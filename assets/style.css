@@ -1,0 +1,165 @@
+:root {
+    --default-theme-color: #0766ff;
+    --default-box-shadow-value: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);;
+    --default-button-color: #42b72a;
+    --default-text-color: #ffffff;
+    --minor-text-color: #0866ff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+}
+
+/* ---------------------------------------- */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 112px;
+    padding-top: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.unknown_place {
+    width: 400px;
+    margin-left: 7%;
+    transform: translateY(-50px);
+}
+
+.unknown_place .logo_box {
+    margin: 20px 0;
+}
+
+.logo_box .logo {
+    font-size: 64px;
+    color: var(--default-theme-color);
+}
+
+.login_box {
+    width: 396px;
+    height: fit-content;
+    box-shadow: var(--default-box-shadow-value);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 0 28px;
+    margin-right: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.account_box, .password_box, .submit_box {
+    width: 90%;
+    height: 40px;
+    margin: 10px 0;
+}
+
+.account_box > input, .password_box > input {
+    width: 100%;
+    height: 48px;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    padding-left: 14px;
+}
+
+.submit_box {
+    display: flex;
+    justify-content: center;
+}
+
+.submit_box > button {
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    cursor: pointer;
+    background-color: var(--default-theme-color);
+    color: var(--default-text-color);
+}
+
+.submit_box > button:active {
+    opacity: 0.8;
+}
+
+.addition {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.addition a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--minor-text-color);
+}
+
+.horizontal_split_line {
+    height: 1px;
+    width: 90%;
+    background-color: #9f9f9f;
+    margin: 20px 16px;
+}
+
+.create_account_box {
+    height: 48px;
+    border-radius: 6px;
+    background-color: var(--default-button-color);
+    padding: 0 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.create_account_box a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--default-text-color);
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 25% 5%;
+        gap: 0;
+    }
+
+    .unknown_place {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .unknown_place .descrip_box {
+        position: absolute;
+        display: none;
+    }
+
+    .login_box {
+        margin-right: 0;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .login_box {
+        width: 98%;
+    }
+}
